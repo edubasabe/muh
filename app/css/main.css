@@ -89,6 +89,11 @@ html {
   width: 120%;
 }
 
+.section--equipo {
+  height: 40vh;
+  background-color: #ff0000;
+}
+
 .section--about {
   background-color: #eee;
 }

@@ -35,3 +35,37 @@ $(document).on('ready', function() {
     $('#subModal').modal('show');
   }, 2000);
 });
+
+
+// --
+// Owl Carousel
+// --
+
+//-- Altura del Viewport
+var altoSlide = $(window).height();
+
+$('.home-slide').css({
+ 'max-height': altoSlide + 'px!important',
+ 'height': altoSlide + 'px'
+});
+
+$(document).ready(function(){
+  $('#slider-carousel').owlCarousel({
+    loop:true,
+    margin:0,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    dots:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+});
+});
