@@ -45,7 +45,7 @@ gulp.task('watch', ['browserSync','sass'], function (){
 
 //-- Useref
 gulp.task('useref', function(){
-  return gulp.src('app/*.+(html|php)')
+  return gulp.src('app/*.html')
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))
     .pipe(gulpIf('*.css', cssnano()))

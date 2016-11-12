@@ -1,0 +1,11 @@
+.btn {
+  font-family: $EnzoBold;
+  &-primary {
+    background-color: $darkgray;
+    border: $darkgray;
+  }
+  &-secondary {
+    background-color: $crema;
+    border: $crema;
+  }
+}

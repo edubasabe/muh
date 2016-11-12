@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Enzo-Light';
+  src: url('../fonts/EnzoOT-Light.eot');
+  src: url('../fonts/EnzoOT-Light.woff2') format('woff2'),
+       url('../fonts/EnzoOT-Light.woff') format('woff'),
+       url('../fonts/EnzoOT-Light.ttf') format('truetype'),
+       url('../fonts/EnzoOT-Light.svg#EnzoOT-Light') format('svg'),
+       url('../fonts/EnzoOT-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Enzo-Medi';
+  src: url('../fonts/EnzoOT-Medi.eot');
+  src: url('../fonts/EnzoOT-Medi.woff2') format('woff2'),
+       url('../fonts/EnzoOT-Medi.woff') format('woff'),
+       url('../fonts/EnzoOT-Medi.ttf') format('truetype'),
+       url('../fonts/EnzoOT-Medi.svg#Enzo-Medi') format('svg'),
+       url('../fonts/EnzoOT-Medi.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+@font-face {
+  font-family: 'Enzo-Bold';
+  src: url('../fonts/EnzoOT-Bold.eot');
+  src: url('../fonts/EnzoOT-Bold.woff2') format('woff2'),
+       url('../fonts/EnzoOT-Bold.woff') format('woff'),
+       url('../fonts/EnzoOT-Bold.ttf') format('truetype'),
+       url('../fonts/EnzoOT-Bold.svg#EnzoOT-Bold') format('svg'),
+       url('../fonts/EnzoOT-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$Enzo: 'Enzo-Medi', Helvetica, sans-serif;
+$EnzoLight: 'Enzo-Light', Helvetica, sans-serif;
+$EnzoBold: 'Enzo-Bold', Helvetica, sans-serif;
+
+h1, h2, h3, h4, h5 , h6 {
+  font-family: 'Enzo-Bold', Helvetica, sans-serif;
+}
+input, p {
+  font-family: $Enzo;
+}

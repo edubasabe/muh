@@ -1,0 +1,140 @@
+@font-face {
+  font-family: 'Enzo-Light';
+  src: url("../fonts/EnzoOT-Light.eot");
+  src: url("../fonts/EnzoOT-Light.woff2") format("woff2"), url("../fonts/EnzoOT-Light.woff") format("woff"), url("../fonts/EnzoOT-Light.ttf") format("truetype"), url("../fonts/EnzoOT-Light.svg#EnzoOT-Light") format("svg"), url("../fonts/EnzoOT-Light.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Enzo-Medi';
+  src: url("../fonts/EnzoOT-Medi.eot");
+  src: url("../fonts/EnzoOT-Medi.woff2") format("woff2"), url("../fonts/EnzoOT-Medi.woff") format("woff"), url("../fonts/EnzoOT-Medi.ttf") format("truetype"), url("../fonts/EnzoOT-Medi.svg#Enzo-Medi") format("svg"), url("../fonts/EnzoOT-Medi.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Enzo-Bold';
+  src: url("../fonts/EnzoOT-Bold.eot");
+  src: url("../fonts/EnzoOT-Bold.woff2") format("woff2"), url("../fonts/EnzoOT-Bold.woff") format("woff"), url("../fonts/EnzoOT-Bold.ttf") format("truetype"), url("../fonts/EnzoOT-Bold.svg#EnzoOT-Bold") format("svg"), url("../fonts/EnzoOT-Bold.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Enzo-Bold', Helvetica, sans-serif;
+}
+
+input, p {
+  font-family: "Enzo-Medi", Helvetica, sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 1.6rem;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 62.5%;
+}
+
+.navbar {
+  background-image: -webkit-linear-gradient(bottom, transparent, #000000);
+  background-image: linear-gradient(to top, transparent, #000000);
+  border-bottom: 0;
+  min-height: 9rem;
+}
+
+.navbar-brand {
+  height: auto;
+  padding: 1.5rem 0 0;
+  cursor: pointer;
+}
+
+.navbar--color-crema {
+  color: #f8ebde;
+}
+
+.navbar__icons {
+  padding-top: 1.5rem;
+}
+
+@media (min-width: 767px) {
+  .navbar {
+    -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    transition: background .5s ease-in-out,padding .5s ease-in-out;
+  }
+}
+
+.section {
+  height: 100%;
+  padding-top: 15rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.section--intro {
+  background-color: #fff;
+}
+
+.section--intro__bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+}
+
+.section--about {
+  background-color: #eee;
+}
+
+.section--services {
+  background-color: #eee;
+}
+
+.section--contact {
+  background-color: #eee;
+}
+
+.headline--crema {
+  color: #f8ebde;
+}
+
+.headline--bold {
+  font-weight: bold;
+}
+
+.btn {
+  font-family: "Enzo-Bold", Helvetica, sans-serif;
+}
+
+.btn-primary {
+  background-color: #434244;
+  border: #434244;
+}
+
+.btn-secondary {
+  background-color: #f8ebde;
+  border: #f8ebde;
+}
+
+.form p {
+  font-family: "Enzo-Light", Helvetica, sans-serif;
+}
+
+.form label {
+  font-family: "Enzo-Medi", Helvetica, sans-serif;
+}
+
+.modal-title {
+  font-size: 2.5rem;
+}
+
+.modal__text-lead {
+  font-size: 1.8rem;
+}

@@ -1,0 +1,28 @@
+.section {
+  height: 100%;
+  padding-top: 15rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &--intro {
+    background-color: #fff;
+
+    &__bg-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 120%;
+    }
+  }
+
+  &--about {
+    background-color:  #eee;
+  }
+  &--services {
+    background-color:  #eee;
+  }
+  &--contact {
+    background-color:  #eee;
+  }
+}
