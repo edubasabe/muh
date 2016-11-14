@@ -29,6 +29,14 @@
   &--contact {
     background-color:  #eee;
   }
+
+  &--small {
+     padding: 3rem 0;
+  }
+
+  &__icon-padding-right {
+    padding-right: 1rem;
+  }
 }
 
 .no-gutter > [class*='col-'] {
