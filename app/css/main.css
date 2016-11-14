@@ -86,7 +86,7 @@ html {
   position: absolute;
   top: 0;
   left: 0;
-  width: 120%;
+  width: 100%;
 }
 
 .section--equipo {
@@ -106,12 +106,24 @@ html {
   background-color: #eee;
 }
 
+.no-gutter > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 .headline--crema {
   color: #f8ebde;
 }
 
 .headline--bold {
   font-weight: bold;
+}
+
+.headline--black-bg {
+  background: rgba(0, 0, 0, 0.7);
+  max-width: 60rem;
+  padding: 3rem;
+  width: 100%;
 }
 
 .btn {
@@ -142,4 +154,113 @@ html {
 
 .modal__text-lead {
   font-size: 1.8rem;
+}
+
+.owl-carousel {
+  position: relative;
+}
+
+.owl-carousel .item {
+  position: relative;
+}
+
+.owl-carousel .item .img-bg {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+.owl-carousel .item img {
+  position: relative;
+}
+
+.owl-carousel .item p {
+  position: absolute;
+  font-size: 1.8rem;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.owl-carousel .owl-controls {
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(0%, -100%);
+          transform: translate(0%, -100%);
+  width: 100%;
+}
+
+.owl-carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.owl-carousel .owl-nav .owl-prev {
+  float: left;
+}
+
+.owl-carousel .owl-nav .owl-next {
+  float: right;
+}
+
+.owl-carousel .owl-dots {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.parallax [class*="bg__"] {
+  position: relative;
+  height: 50vh;
+  text-indent: -9999px;
+  background-attachment: fixed;
+  background-position: top center;
+  background-size: cover;
+}
+
+.parallax [class*="bg__"]:nth-child(2n) {
+  box-shadow: inset 0 0 1em #111;
+}
+
+.parallax .bg__section1 {
+  height: 100vh;
+}
+
+.parallax .bg__section1 {
+  background-image: url("../../images/bg/Slide1.png");
+}
+
+.parallax .bg__section2 {
+  background-image: url("../../images/bg/Slide1.png");
+}
+
+.parallax .bg__section3 {
+  background-image: url("");
+}
+
+.parallax .bg__section4 {
+  background-image: url("");
+}
+
+.parallax .bg__section5 {
+  box-shadow: inset 0 0 1em #111;
+  background-image: url("");
+}
+
+.parallax .capture {
+  float: right;
+  width: 200px;
+  padding: 1em;
+  margin: -1.5em 1em 0 0;
+  text-indent: 0;
+  background: rgba(243, 243, 243, 0.75);
+  box-shadow: 0 1px 0.125em #333;
 }

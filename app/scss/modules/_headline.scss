@@ -5,4 +5,11 @@
   &--bold {
     font-weight: bold;
   }
+
+  &--black-bg {
+    background: rgba($negro, .7);
+    max-width: 60rem;
+    padding: 3rem;
+    width: 100%;
+  }
 }

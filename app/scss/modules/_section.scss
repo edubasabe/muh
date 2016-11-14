@@ -12,7 +12,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 120%;
+      width: 100%;
     }
   }
 
@@ -29,4 +29,9 @@
   &--contact {
     background-color:  #eee;
   }
+}
+
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
 }

@@ -1,0 +1,50 @@
+.parallax {
+    [class*="bg__"] {
+        position: relative;
+        height: 50vh;
+        text-indent: -9999px;
+        background-attachment: fixed;
+        background-position: top center;
+        background-size: cover;
+
+        &:nth-child( 2n ) {
+            box-shadow: inset 0 0 1em #111;
+        }
+    }
+
+
+    .bg__section1 {
+        height: 100vh;
+    }
+
+    .bg__section1 {
+        background-image: url('../../images/bg/Slide1.png');
+    }
+
+    .bg__section2 {
+        background-image: url('../../images/bg/Slide1.png');
+    }
+
+    .bg__section3 {
+        background-image: url('');
+    }
+
+    .bg__section4 {
+        background-image: url('');
+    }
+
+    .bg__section5 {
+        box-shadow: inset 0 0 1em #111;
+        background-image: url('');
+    }
+
+    .capture {
+        float: right;
+        width: 200px;
+        padding: 1em;
+        margin: -1.5em 1em 0 0;
+        text-indent: 0;
+        background: rgba( #f3f3f3, 0.75 );
+        box-shadow: 0 1px 0.125em #333;
+    }
+}
