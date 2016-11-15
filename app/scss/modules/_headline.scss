@@ -9,7 +9,12 @@
   &--black-bg {
     background: rgba($negro, .7);
     max-width: 60rem;
-    padding: 3rem;
+    padding: 4.5rem;
     width: 100%;
+  }
+
+  &--flex-bottom {
+    align-self: flex-end;
+    margin-bottom: 6rem;
   }
 }

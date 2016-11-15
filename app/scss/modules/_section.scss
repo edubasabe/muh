@@ -7,6 +7,8 @@
 
   &--intro {
     background-color: #fff;
+    position: relative;
+
 
     &__bg-image {
       position: absolute;
@@ -18,7 +20,6 @@
 
   &--equipo {
     height: 40vh;
-    background-color:  #ff0000;
   }
   &--about {
     background-color:  #eee;
@@ -27,7 +28,14 @@
     background-color:  #eee;
   }
   &--contact {
-    background-color:  #eee;
+    border-top: 5px solid $lightgray;
+    background-color:  $darkgray;
+
+    p,
+    label {
+      color: $crema;
+    }
+
   }
 
   &--small {
@@ -37,6 +45,12 @@
   &__icon-padding-right {
     padding-right: 1rem;
   }
+}
+
+.full-height {
+  display: flex;
+  height: 100vh;
+  position: relative;
 }
 
 .no-gutter > [class*='col-'] {

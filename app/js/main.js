@@ -27,7 +27,7 @@ $(function() {
 // ---------------
 $(document).on('ready', function() {
     setTimeout(function() {
-        // $('#subModal').modal('show');
+         $('#subModal').modal('show');
     }, 2000);
 });
 
@@ -51,7 +51,8 @@ $(document).ready(function() {
         autoplay: false,
         autoplaySpeed: 2000,
         dots: true,
-        navText: ['<', '>'],
+        navText: ['<svg width="17" height="31"><path d=" M 15 1 L 1 15 L 15 30" stroke="#FFFFFF" stroke-width="2" fill="none" /></svg>  ',
+        '<svg width="17" height="31"><path d=" M 1 1 L 15 15 L 1 30" stroke="#FFFFFF" stroke-width="2" fill="none" /></svg>'],
         nav: true,
         responsive: {
             0: {

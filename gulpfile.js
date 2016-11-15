@@ -11,6 +11,7 @@ var del             =  require('del');
 var runSequence     =  require('run-sequence');
 var cssnano         =  require('gulp-cssnano');
 
+
 var sassOptions = {
   errLogToConsole: true,
   outputStyle: 'expanded'
@@ -19,9 +20,10 @@ var sassOptions = {
 //-- BrowserSync
 gulp.task('browserSync', function() {
   browserSync.init({
-    server: {
-      baseDir: 'app'
-    },
+    // server: {
+    //   baseDir: 'app'
+    // },
+    proxy: 'localhost:8888/landing-muh/muh-landing-page/app/'
   });
 });
 

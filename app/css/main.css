@@ -34,6 +34,7 @@ body {
   width: 100%;
   height: 100%;
   font-size: 1.6rem;
+  background: #000;
 }
 
 html {
@@ -63,7 +64,7 @@ html {
   padding-top: 1.5rem;
 }
 
-@media (min-width: 767px) {
+@media only screen and (min-width: 768px) {
   .navbar {
     -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
     transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -80,6 +81,7 @@ html {
 
 .section--intro {
   background-color: #fff;
+  position: relative;
 }
 
 .section--intro__bg-image {
@@ -91,7 +93,6 @@ html {
 
 .section--equipo {
   height: 40vh;
-  background-color: #ff0000;
 }
 
 .section--about {
@@ -103,7 +104,13 @@ html {
 }
 
 .section--contact {
-  background-color: #eee;
+  border-top: 5px solid #c2c4c6;
+  background-color: #434244;
+}
+
+.section--contact p,
+.section--contact label {
+  color: #f8ebde;
 }
 
 .section--small {
@@ -112,6 +119,14 @@ html {
 
 .section__icon-padding-right {
   padding-right: 1rem;
+}
+
+.full-height {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  position: relative;
 }
 
 .no-gutter > [class*='col-'] {
@@ -130,8 +145,14 @@ html {
 .headline--black-bg {
   background: rgba(0, 0, 0, 0.7);
   max-width: 60rem;
-  padding: 3rem;
+  padding: 4.5rem;
   width: 100%;
+}
+
+.headline--flex-bottom {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 6rem;
 }
 
 .btn {
@@ -211,10 +232,12 @@ html {
 
 .owl-carousel .owl-nav .owl-prev {
   float: left;
+  background: transparent !important;
 }
 
 .owl-carousel .owl-nav .owl-next {
   float: right;
+  background: transparent !important;
 }
 
 .owl-carousel .owl-dots {
@@ -229,7 +252,7 @@ html {
   position: relative;
   background-attachment: fixed;
   background-position: top center;
-  background-size: cover;
+  background-size: contain;
 }
 
 .parallax [class*="bg__"]:nth-child(2n) {
@@ -237,15 +260,34 @@ html {
 }
 
 .parallax .bg__section-1 {
-  height: 100vh;
+  background-image: url("../../images/bg/first-screen-small.jpg");
 }
 
-.parallax .bg__section-1 {
-  background-image: url("../../images/bg/bg1.png");
+@media only screen and (min-width: 768px) {
+  .parallax .bg__section-1 {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 
 .parallax .bg__section-2 {
-  background-image: url("../../images/bg/team-muh.png");
+  background-image: url("../../images/bg/second-screen-small.jpg");
+  background-size: contain;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 480px) {
+  .parallax .bg__section-2 {
+    background-size: contain;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .parallax .bg__section-2 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
 }
 
 .parallax .bg__section-3 {
@@ -259,29 +301,6 @@ html {
 .parallax .bg__section-5 {
   box-shadow: inset 0 0 1em #111;
   background-image: url("");
-}
-
-.parallax .capture {
-  float: right;
-  width: 200px;
-  padding: 1em;
-  margin: -1.5em 1em 0 0;
-  text-indent: 0;
-  background: rgba(243, 243, 243, 0.75);
-  box-shadow: 0 1px 0.125em #333;
-}
-
-body:before {
-  content: "";
-  display: block;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -10;
-  background: url("../../images/bg/team-muh.png") no-repeat center center;
-  background-size: cover;
 }
 
 #map {

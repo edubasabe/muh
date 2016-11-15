@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <!-- endbuild -->
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -61,8 +63,8 @@
                     <div class="col-xs-12">
                         <a href="#page-top" class="navbar-brand page-scroll"><img src="./images/LogoCrema.png" srcset="./images/LogoCrema.png 1x, ./images/LogoCrema@2x.png 2x" alt="Logo de Muh"><span class="sr-only">Muh</span></a>
                         <ul class="list-inline text-right navbar__icons">
-                            <li><a href="#" class="navbar--color-crema"><i class="fa fa-3x fa-instagram"></i><span class="sr-only">Instagram</span></a></li>
-                            <li><a href="#" class="navbar--color-crema"><i class="fa fa-3x fa-facebook-square"></i><span class="sr-only">Facebook</span></a></li>
+                            <li><a href="https://www.instagram.com/muhpanama" class="navbar--color-crema"><i class="fa fa-3x fa-instagram"></i><span class="sr-only">Instagram</span></a></li>
+                            <li><a href="https://www.facebook.com/muhpanama" class="navbar--color-crema"><i class="fa fa-3x fa-facebook-square"></i><span class="sr-only">Facebook</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -71,20 +73,20 @@
     </header>
     <!-- Intro Section -->
     <div class="parallax">
-    <section id="intro" class="section section--intro bg__section-1">
-        <!-- <img src="./images/bg/bg1.png" alt="Imagen de background" class="section--intro__bg-image"> -->
-        <div class="container">
+    <section id="intro" class="section--intro bg__section-1 parallax">
+        <!-- <img src="./images/bg/bg1.png" alt="Imagen de background" class="section-intro__bg-image"> -->
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="headline headline--crema headline--bold">In hac habitasse platea dictumst.</h2>
+                <div class="col-lg-12 full-height">
+                    <h2 class="headline headline--crema headline--bold headline--flex-bottom">Bienvenidos a la primera meat boutique de Panamá.</h2>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Equipo Section Parallax -->
-    <section id="equipo" class="section section--equipo bg__section-2">
-        <div class="container">
+    <section id="equipo" class="section--equipo bg__section-2">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
                 </div>
@@ -100,21 +102,21 @@
                     <div id="slider-carousel" class="owl-carousel">
                         <div class="item">
                           <div class="img-bg">
-                            <img src="./images/bg/Slide1.png" alt="Carne a la parrilla" class="img-responsive">
+                            <img src="./images/bg/slide-1-small.jpg" alt="Carne a la parrilla" class="img-responsive">
                           </div>
-                            <p class="headline--crema headline--black-bg">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris.</p>
+                            <p class="headline--crema headline--black-bg">Los mejores cortes de carne son preparados con una exquisita mezcla entre la tradición y la alta cocina creativa.</p>
                         </div>
                         <div class="item">
                           <div class="img-bg">
-                            <img src="./images/bg/Slide2.png" alt="" class="img-responsive">
+                            <img src="./images/bg/slide-2-small.jpg" alt="" class="img-responsive">
                           </div>
-                              <p class="headline--crema headline--black-bg">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris.</p>
+                              <p class="headline--crema headline--black-bg">Comida contemporánea en un ambiente cómodo con luz natural donde, también, puedes adquirir los cortes que probaste, para tu preparación en casa.</p>
                         </div>
                         <div class="item">
                           <div class="img-bg">
-                            <img src="./images/bg/Slide3.png" alt="" class="img-responsive">
+                            <img src="./images/bg/slide-3-small.jpg" alt="" class="img-responsive">
                           </div>
-                              <p class="headline--crema headline--black-bg">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris.</p>
+                              <p class="headline--crema headline--black-bg">Cervezas artesanales, importadas y vinos, harán el maridaje perfecto para esa pieza de arte en tu mesa.</p>
                         </div>
                     </div>
                 </div>
@@ -125,36 +127,53 @@
 
     <!-- Contact Section -->
     <div id="map"></div>
+
+    <script>
+      function enviarMensaje(){
+      var nombre = document.getElementById('nombre').value;
+      var correo = document.getElementById('correo').value;
+      var mensaje = document.getElementById('mensaje').value;
+
+      var dataen = 'nombre='+nombre +'&apellido='+apellido +'&correo='+correo+'&mensaje='+mensaje;
+
+      $.ajax({
+        type:'post',
+        url:'send.php',
+        data:dataen,
+        success:function(resp){
+          $('#respa').html(resp);
+        }
+      });
+      return false;
+      }
+    </script>
     <section id="contact" class="section--small section--contact">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-4">
-                  <h4>Acerca de Muh</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <div class="col-xs-12 col-sm-4">
-                  <h4>Información de contacto</h4>
+                <div class="col-xs-12 col-sm-6">
+                  <h4 class="headline--crema">Información de contacto</h4>
                   <p><i class="fa fa-map-marker section__icon-padding-right"></i>Calle 50 con calle 76 San Francisco, Panamá<br>
                   <i class="fa fa-envelope-o section__icon-padding-right"></i>hola@muhpanama.com <br>
                   <i class="fa fa-phone section__icon-padding-right"></i>387 8127</p>
                 </div>
-                <div class="col-xs-12 col-sm-4">
-                  <h4>Contacto</h4>
+                <div class="col-xs-12 col-sm-6">
+                  <h4 class="headline--crema">Contacto</h4>
                   <p>Puedes enviar tus sugerencias a través del siguiente Formulario de contacto</p>
-                  <form class="form" action="index.html" method="post">
+                  <form class="form" onsubmit="return enviarMensaje();" method="post">
                   <div class="form-group">
                     <label for="nombre">Nombre:</label>
                     <input type="text" class="input-lg form-control" id="nombre"  name="nombre" placeholder="Escribe tu nombre">
                   </div>
                   <div class="form-group">
-                    <label for="nombre">Email:</label>
+                    <label for="correo">Email:</label>
                     <input type="text" class="input-lg form-control" id="correo"  name="correo" placeholder="Escribe tu correo">
                   </div>
                   <label for="mensaje">Mensaje:</label>
-                  <textarea name="mensaje" rows="4" class="form-control"></textarea>
+                  <textarea name="mensaje" rows="4" class="form-control" id="mensaje"></textarea>
                   <br>
-                  <input type="submit" name="submit" value="Enviar Mensaje" class="btn btn-lg btn-primary text-center center-block">
+                  <input type="button" value="Enviar Mensaje" class="btn btn-lg btn-secondary text-center center-block" onclick="return enviarMensaje();">
                   </form>
+                  <p id="respuesta"></p>
                 </div>
             </div>
         </div>
@@ -168,14 +187,28 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title text-center">¡Participa!</h4>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" id="mc_embed_signup">
                     <p class="text-center modal__text-lead">Ingresa tu correo electrónico y llévate <b>gratis</b> el trío de chorizo parrillero</p>
-                    <form class="form validate" action="//tresdosunocorp.us14.list-manage.com/subscribe/post?u=278c2379bffafa89823055575&amp;id=ac697595f5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" name="nombre" value="" class="input-lg form-control" placeholder="Ingresa tu nombre y apellido"> <br>
-                        <label for="email">E-mail:</label>
-                        <input type="text" name="email" value="" class="input-lg form-control" placeholder="Ingresa tu correo electrónico"> <br>
-                        <input type="submit" name="name" value="Suscríbete" class="btn btn-lg btn-primary center-block">
+                    <!-- Begin MailChimp Signup Form -->
+                    <form action="//tresdosunocorp.us14.list-manage.com/subscribe/post?u=278c2379bffafa89823055575&amp;id=ac697595f5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form" target="_blank" novalidate>
+
+                        <div class="mc-field-group">
+                          <label for="name">Nombre:</label>
+                          <input type="text" name="name" value="" id="mce-FNAME" class="input-lg form-control" placeholder="Ingresa tu nombre y apellido">
+                        </div>
+
+                        <br>
+                        <div class="mc-field-group">
+                        <label for="email">E-mail:<span class="asterisk">*</span></label>
+                        <input type="email" name="EMAIL" value="" class="required email input-lg form-control" placeholder="Ingresa tu correo electrónico" id="mce-EMAIL"> <br>
+                      </div>
+
+                      <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                      </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+
+                        <input type="submit" name="subscribe" value="Suscríbete" class="btn btn-lg btn-primary center-block" id="mc-embedded-subscribe">
                     </form>
                 </div>
             </div>
@@ -191,7 +224,8 @@
         map = new google.maps.Map(document.getElementById('map'), {
           center: myLatLng,
           scrollwheel: false,
-          zoom: 18
+          draggable: false,
+          zoom: 17
         });
 
         var marker = new google.maps.Marker({

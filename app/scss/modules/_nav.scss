@@ -17,7 +17,7 @@
     padding-top: 1.5rem;
   }
 
-  @include tablet {
+  @include sm-device {
     transition: background .5s ease-in-out,padding .5s ease-in-out;
   }
 }
