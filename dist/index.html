@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Boutique de Carnes">
+    <meta name="keywords" content="Boutique, carnes, carnes panama, muh">
+    <meta name="author" content="TresDosUnoCorp.com">
+    <meta name="theme-color" content="#f8ebde">
+    <title>Muh Panamá</title>
+
+    <link rel="stylesheet" href="css/master.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+
+    <!-- <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="#page-top">Muh</a>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="hidden"><a class="page-scroll" href="#page-top"></a></li>
+                        <li><a class="page-scroll" href="#about">About</a></li>
+                        <li><a class="page-scroll" href="#services">Services</a></li>
+                        <li><a class="page-scroll" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav> -->
+
+    <header>
+        <nav class="navbar navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <a href="#page-top" class="navbar-brand page-scroll"><img src="./images/LogoCrema.png" srcset="./images/LogoCrema.png 1x, ./images/LogoCrema@2x.png 2x" alt="Logo de Muh"><span class="sr-only">Muh</span></a>
+                        <ul class="list-inline text-right navbar__icons">
+                            <li><a href="https://www.instagram.com/muhpanama" class="navbar--color-crema"><i class="fa fa-3x fa-instagram"></i><span class="sr-only">Instagram</span></a></li>
+                            <li><a href="https://www.facebook.com/muhpanama" class="navbar--color-crema"><i class="fa fa-3x fa-facebook-square"></i><span class="sr-only">Facebook</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Intro Section -->
+    <div class="parallax">
+    <section id="intro" class="section--intro bg__section-1 parallax">
+        <!-- <img src="./images/bg/bg1.png" alt="Imagen de background" class="section-intro__bg-image"> -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 full-height">
+                    <h2 class="headline headline--crema headline--bold headline--flex-bottom">Bienvenidos a la primera meat boutique de Panamá.</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipo Section Parallax -->
+    <section id="equipo" class="section--equipo bg__section-2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+    <!-- About Section -->
+    <section id="about" class="section--about">
+        <div class="container-fluid">
+            <div class="row no-gutter">
+                <div class="col-lg-12">
+                    <div id="slider-carousel" class="owl-carousel">
+                        <div class="item">
+                          <div class="img-bg">
+                            <img src="./images/bg/slide-1-small.jpg" alt="Carne a la parrilla" class="img-responsive">
+                          </div>
+                            <p class="headline--crema headline--black-bg">Los mejores cortes de carne son preparados con una exquisita mezcla entre la tradición y la alta cocina creativa.</p>
+                        </div>
+                        <div class="item">
+                          <div class="img-bg">
+                            <img src="./images/bg/slide-2-small.jpg" alt="" class="img-responsive">
+                          </div>
+                              <p class="headline--crema headline--black-bg">Comida contemporánea en un ambiente cómodo con luz natural donde, también, puedes adquirir los cortes que probaste, para tu preparación en casa.</p>
+                        </div>
+                        <div class="item">
+                          <div class="img-bg">
+                            <img src="./images/bg/slide-3-small.jpg" alt="" class="img-responsive">
+                          </div>
+                              <p class="headline--crema headline--black-bg">Cervezas artesanales, importadas y vinos, harán el maridaje perfecto para esa pieza de arte en tu mesa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <div id="map"></div>
+
+    <script>
+      function enviarMensaje(){
+      var nombre = document.getElementById('nombre').value;
+      var correo = document.getElementById('correo').value;
+      var mensaje = document.getElementById('mensaje').value;
+
+      var dataen = 'nombre='+nombre +'&correo='+correo+'&mensaje='+mensaje;
+
+      $.ajax({
+        type:'post',
+        url:'send.php',
+        data:dataen,
+        success:function(resp){
+          $('#respa').html(resp);
+        }
+      });
+      return false;
+      }
+    </script>
+    <section id="contact" class="section--small section--contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                  <h4 class="headline--crema">Información de contacto</h4>
+                  <p><i class="fa fa-map-marker section__icon-padding-right"></i>Calle 50 con calle 76 San Francisco, Panamá<br>
+                  <i class="fa fa-envelope-o section__icon-padding-right"></i>hola@muhpanama.com <br>
+                  <i class="fa fa-phone section__icon-padding-right"></i>387 8127</p>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <h4 class="headline--crema">Contacto</h4>
+                  <p>Puedes enviar tus sugerencias a través del siguiente Formulario de contacto</p>
+                  <form class="form" onsubmit="return enviarMensaje();" method="post">
+                  <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" class="input-lg form-control" id="nombre"  name="nombre" placeholder="Escribe tu nombre" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="correo">Email:</label>
+                    <input type="text" class="input-lg form-control" id="correo"  name="correo" placeholder="Escribe tu correo" required>
+                  </div>
+                  <label for="mensaje">Mensaje:</label>
+                  <textarea name="mensaje" rows="4" class="form-control" id="mensaje"></textarea>
+                  <br>
+                  <input type="button" value="Enviar Mensaje" class="btn btn-lg btn-secondary text-center center-block" onclick="return enviarMensaje();" required>
+                  </form>
+                  <p class="text-center lead" id="respa"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Subscribete -->
+    <div id="subModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title text-center">¡Participa!</h4>
+                </div>
+                <div class="modal-body" id="mc_embed_signup">
+                    <p class="text-center modal__text-lead">Ingresa tu correo electrónico y llévate <b>gratis</b> el trío de chorizo parrillero</p>
+                    <!-- Begin MailChimp Signup Form -->
+                    <form action="//tresdosunocorp.us14.list-manage.com/subscribe/post?u=278c2379bffafa89823055575&amp;id=ac697595f5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form" target="_blank" novalidate>
+
+                        <div class="mc-field-group">
+                          <label for="name">Nombre:</label>
+                          <input type="text" name="name" value="" id="mce-FNAME" class="input-lg form-control" placeholder="Ingresa tu nombre y apellido">
+                        </div>
+
+                        <br>
+                        <div class="mc-field-group">
+                        <label for="email">E-mail:<span class="asterisk">*</span></label>
+                        <input type="email" name="EMAIL" value="" class="required email input-lg form-control" placeholder="Ingresa tu correo electrónico" id="mce-EMAIL"> <br>
+                      </div>
+
+                      <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                      </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+
+                        <input type="submit" name="subscribe" value="Suscríbete" class="btn btn-lg btn-primary center-block" id="mc-embedded-subscribe">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+      var map;
+      function initMap() {
+        var image = './images/map-marker.svg';
+        var myLatLng = {lat: 8.99305, lng: -79.503};
+
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: myLatLng,
+          scrollwheel: false,
+          draggable: false,
+          zoom: 17
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          // title: 'Hello World!'
+          icon: image
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB39kQdRisms3Oi6jVbKHsPYlzqs5duuk4&callback=initMap"
+        async defer></script>
+    <script src="js/master.min.js"></script>
+</body>
+</html>

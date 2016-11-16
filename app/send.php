@@ -1,6 +1,5 @@
 <?php
 $nombre = $_POST['nombre'];
-$apellido = $_POST['apellido'];
 $correo = $_POST['correo'];
 $mensaje = $_POST['mensaje'];
 
@@ -11,18 +10,15 @@ $email_to = "edu@tresdosunocorp.com";
 $email_subject = "Contacto desde el sitio web";
 
 // Aquí se deberían validar los datos ingresados por el usuario
-if(!isset($_POST['nombre']) ||
-// !isset($_POST['apellido']) ||
-!isset($_POST['correo'])) {
+if(!isset($_POST['nombre']) || !isset($_POST['mensaje']) || !isset($_POST['correo']) || $mensaje = '' ) {
 
-echo "<b>Ocurrió un error y el formulario no ha sido enviado. </b><br />";
+echo "<b class='text-center'>Ocurrió un error y el formulario no ha sido enviado. </b><br />";
 echo "Por favor, vuelva atrás y verifique la información ingresada<br />";
 die();
 }
 
 $email_message = "Detalles del formulario de contacto:\n\n";
 $email_message .= "Nombre: " . $_POST['nombre'] . "\n";
-$email_message .= "Apellido: " . $_POST['apellido'] . "\n";
 $email_message .= "E-mail: " . $_POST['correo'] . "\n";
 $email_message .= "Mensaje: " . $_POST['mensaje'] . "\n\n";
 // $email_message .= "Teléfono: " . $_POST['telephone'] . "\n";
@@ -35,7 +31,7 @@ $headers = 'From: '.$email_from."\r\n".
 'X-Mailer: PHP/' . phpversion();
 @mail($email_to, $email_subject, $email_message, $headers);
 
-echo "¡El formulario se ha enviado con éxito! \n";
+echo "¡Gracias tu mensaje ha sido enviado! \n";
 }
 
 

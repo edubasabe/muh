@@ -18,7 +18,7 @@
     }
 }
 // -- Medium Devices, Desktops -- //
-@mixin ms-device {
+@mixin md-device {
   @media only screen and (min-width: 992px) {
     @content;
     }

@@ -18,31 +18,57 @@
     }
 
     .bg__section-1 {
-        background-image: url('images/bg/first-screen-small.jpg');
+
+        @include xxs-device {
+          background-image: url('../images/bg/first-screen-small.jpg');
+        }
+
+        @include xs-device {
+          background-image: url('../images/bg/first-screen-small.jpg');
+
+        }
 
         @include sm-device {
+          background-image: url('../images/bg/first-screen-small.jpg');
           background-size: cover;
           background-repeat: no-repeat;
+        }
+
+        @include md-device {
+          background-image: url('../images/bg/first-screen-large.jpg');
+          background-attachment: fixed;
         }
 
     }
 
     .bg__section-2 {
-        background-image: url('../../images/bg/second-screen-small.jpg');
+
         background-size: contain;
         background-position: center center;
 
         @include xxs-device {
+          background-image: url('../images/bg/second-screen-medium.jpg');
           // background-size: cover;
+          background-position: bottom center;
+          background-attachment: scroll;
         }
         @include xs-device {
+          background-image: url('../images/bg/second-screen-small.jpg');
           background-size: contain;
+          background-position: top center;
         }
         @include sm-device {
+          background-image: url('../images/bg/second-screen-small.jpg');
           background-size: cover;
           background-repeat: no-repeat;
           background-position: top center;
         }
+
+        @include md-device {
+          background-image: url('../images/bg/second-screen-large.jpg');
+          background-attachment: fixed;
+        }
+
     }
 
     .bg__section-3 {

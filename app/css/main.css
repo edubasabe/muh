@@ -259,34 +259,67 @@ html {
   box-shadow: inset 0 0 1em #111;
 }
 
-.parallax .bg__section-1 {
-  background-image: url("../../images/bg/first-screen-small.jpg");
+@media only screen and (min-width: 320px) {
+  .parallax .bg__section-1 {
+    background-image: url("../images/bg/first-screen-small.jpg");
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .parallax .bg__section-1 {
+    background-image: url("../images/bg/first-screen-small.jpg");
+  }
 }
 
 @media only screen and (min-width: 768px) {
   .parallax .bg__section-1 {
+    background-image: url("../images/bg/first-screen-small.jpg");
     background-size: cover;
     background-repeat: no-repeat;
   }
 }
 
+@media only screen and (min-width: 992px) {
+  .parallax .bg__section-1 {
+    background-image: url("../images/bg/first-screen-large.jpg");
+    background-attachment: fixed;
+  }
+}
+
 .parallax .bg__section-2 {
-  background-image: url("../../images/bg/second-screen-small.jpg");
   background-size: contain;
   background-position: center center;
 }
 
+@media only screen and (min-width: 320px) {
+  .parallax .bg__section-2 {
+    background-image: url("../images/bg/second-screen-medium.jpg");
+    background-position: bottom center;
+    background-attachment: scroll;
+  }
+}
+
 @media only screen and (min-width: 480px) {
   .parallax .bg__section-2 {
+    background-image: url("../images/bg/second-screen-small.jpg");
     background-size: contain;
+    background-position: top center;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .parallax .bg__section-2 {
+    background-image: url("../images/bg/second-screen-small.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .parallax .bg__section-2 {
+    background-image: url("../images/bg/second-screen-large.jpg");
+    background-attachment: fixed;
   }
 }
 

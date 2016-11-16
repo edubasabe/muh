@@ -71,4 +71,74 @@ $(document).ready(function() {
 $(document).on('ready', function() {
 $('.owl-nav').insertBefore('.owl-controls');
 });
-// ----------------
+
+
+
+// ----------------------
+// Formulario de Contacto
+// ----------------------
+
+$("#contactForm").validator().on('submit', function (event) {
+  if (event.isDefaultPrevented()) {
+      // handle the invalid form...
+      console.log('Error en el formulario');
+  } else {
+      // everything looks good!
+      event.preventDefault();
+      submitForm();
+  }
+});
+
+function submitForm(){
+    // Initiate Variables With Form Content
+    var nombre = $("#nombre").val();
+    var correo = $("#correo").val();
+    var mensaje = $("#mensaje").val();
+
+    $.ajax({
+        type: "POST",
+        url: "process.php",
+        data: "nombre=" + nombre + "&correo=" + correo + "&mensaje=" + mensaje,
+        success : function(text){
+            if (text == "success"){
+                formSuccess();
+            }
+        }
+    });
+}
+function formSuccess(){
+    $( "#msgSubmit" ).removeClass( "hidden" );
+}
+
+function submitMSG(valid, msg){
+        var msgClasses;
+    if(valid){
+        msgClasses = "h3 text-center tada animated text-success";
+    } else {
+        msgClasses = "h3 text-center text-danger";
+    }
+    $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
+}
+
+
+
+
+
+
+// function enviarMensaje(){
+// var nombre = document.getElementById('nombre').value;
+// var correo = document.getElementById('correo').value;
+// var mensaje = document.getElementById('mensaje').value;
+//
+// var dataen = 'nombre='+nombre +'&correo='+correo+'&mensaje='+mensaje;
+//
+// $.ajax({
+//   type:'post',
+//   url:'send.php',
+//   data:dataen,
+//   success:function(resp){
+//     $('#respa').html(resp);
+//   }
+// });
+// return false;
+// }

@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <!-- endbuild -->
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -73,27 +72,27 @@
     </header>
     <!-- Intro Section -->
     <div class="parallax">
-    <section id="intro" class="section--intro bg__section-1 parallax">
-        <!-- <img src="./images/bg/bg1.png" alt="Imagen de background" class="section-intro__bg-image"> -->
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12 full-height">
-                    <h2 class="headline headline--crema headline--bold headline--flex-bottom">Bienvenidos a la primera meat boutique de Panamá.</h2>
+        <section id="intro" class="section--intro bg__section-1 parallax">
+            <!-- <img src="./images/bg/bg1.png" alt="Imagen de background" class="section-intro__bg-image"> -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 full-height">
+                        <h2 class="headline headline--crema headline--bold headline--flex-bottom">Bienvenidos a la primera meat boutique de Panamá.</h2>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Equipo Section Parallax -->
-    <section id="equipo" class="section--equipo bg__section-2">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
+        <!-- Equipo Section Parallax -->
+        <section id="equipo" class="section--equipo bg__section-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-</div>
+        </section>
+    </div>
     <!-- About Section -->
     <section id="about" class="section--about">
         <div class="container-fluid">
@@ -101,22 +100,25 @@
                 <div class="col-lg-12">
                     <div id="slider-carousel" class="owl-carousel">
                         <div class="item">
-                          <div class="img-bg">
-                            <img src="./images/bg/slide-1-small.jpg" alt="Carne a la parrilla" class="img-responsive">
-                          </div>
+                            <div class="img-bg">
+                              <picture>
+                                <source media="(max-width: 768px)" srcset="./images/bg/slide-1-small.jpg 768w 2x, ./images/bg/slide-1-large.jpg 1920w 1x" type="mimetype">
+                              </picture>
+                                <!-- <img src="./images/bg/slide-1-small.jpg" sizes="100vw" srcset="./images/bg/slide-1-small.jpg 768w 2x, ./images/bg/slide-1-large.jpg 1920w 1x" alt="Carne a la parrilla" class="img-responsive"> -->
+                            </div>
                             <p class="headline--crema headline--black-bg">Los mejores cortes de carne son preparados con una exquisita mezcla entre la tradición y la alta cocina creativa.</p>
                         </div>
                         <div class="item">
-                          <div class="img-bg">
-                            <img src="./images/bg/slide-2-small.jpg" alt="" class="img-responsive">
-                          </div>
-                              <p class="headline--crema headline--black-bg">Comida contemporánea en un ambiente cómodo con luz natural donde, también, puedes adquirir los cortes que probaste, para tu preparación en casa.</p>
+                            <div class="img-bg">
+                                <img src="./images/bg/slide-2-small.jpg" srcset="./images/bg/slide-2-small.jpg 768w 2x, ./images/bg/slide-2-large.jpg 1920w 1x" alt="Nuestras Instalaciones" class="img-responsive">
+                            </div>
+                            <p class="headline--crema headline--black-bg">Comida contemporánea en un ambiente cómodo con luz natural donde, también, puedes adquirir los cortes que probaste, para tu preparación en casa.</p>
                         </div>
                         <div class="item">
-                          <div class="img-bg">
-                            <img src="./images/bg/slide-3-small.jpg" alt="" class="img-responsive">
-                          </div>
-                              <p class="headline--crema headline--black-bg">Cervezas artesanales, importadas y vinos, harán el maridaje perfecto para esa pieza de arte en tu mesa.</p>
+                            <div class="img-bg">
+                                <img src="./images/bg/slide-3-small.jpg" srcset="./images/bg/slide-3-small.jpg 768w, ./images/bg/slide-3-large.jpg 1920w 1x" alt="" class="img-responsive">
+                            </div>
+                            <p class="headline--crema headline--black-bg">Cervezas artesanales, importadas y vinos, harán el maridaje perfecto para esa pieza de arte en tu mesa.</p>
                         </div>
                     </div>
                 </div>
@@ -127,53 +129,39 @@
 
     <!-- Contact Section -->
     <div id="map"></div>
-
-    <script>
-      function enviarMensaje(){
-      var nombre = document.getElementById('nombre').value;
-      var correo = document.getElementById('correo').value;
-      var mensaje = document.getElementById('mensaje').value;
-
-      var dataen = 'nombre='+nombre +'&apellido='+apellido +'&correo='+correo+'&mensaje='+mensaje;
-
-      $.ajax({
-        type:'post',
-        url:'send.php',
-        data:dataen,
-        success:function(resp){
-          $('#respa').html(resp);
-        }
-      });
-      return false;
-      }
-    </script>
     <section id="contact" class="section--small section--contact">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-6">
-                  <h4 class="headline--crema">Información de contacto</h4>
-                  <p><i class="fa fa-map-marker section__icon-padding-right"></i>Calle 50 con calle 76 San Francisco, Panamá<br>
-                  <i class="fa fa-envelope-o section__icon-padding-right"></i>hola@muhpanama.com <br>
-                  <i class="fa fa-phone section__icon-padding-right"></i>387 8127</p>
+                    <h4 class="headline--crema">Información de contacto</h4>
+                    <p><i class="fa fa-map-marker section__icon-padding-right"></i>Calle 50 con calle 76 San Francisco, Panamá<br>
+                        <i class="fa fa-envelope-o section__icon-padding-right"></i>hola@muhpanama.com <br>
+                        <i class="fa fa-phone section__icon-padding-right"></i>387 8127</p>
                 </div>
                 <div class="col-xs-12 col-sm-6">
-                  <h4 class="headline--crema">Contacto</h4>
-                  <p>Puedes enviar tus sugerencias a través del siguiente Formulario de contacto</p>
-                  <form class="form" onsubmit="return enviarMensaje();" method="post">
-                  <div class="form-group">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" class="input-lg form-control" id="nombre"  name="nombre" placeholder="Escribe tu nombre">
-                  </div>
-                  <div class="form-group">
-                    <label for="correo">Email:</label>
-                    <input type="text" class="input-lg form-control" id="correo"  name="correo" placeholder="Escribe tu correo">
-                  </div>
-                  <label for="mensaje">Mensaje:</label>
-                  <textarea name="mensaje" rows="4" class="form-control" id="mensaje"></textarea>
-                  <br>
-                  <input type="button" value="Enviar Mensaje" class="btn btn-lg btn-secondary text-center center-block" onclick="return enviarMensaje();">
-                  </form>
-                  <p id="respuesta"></p>
+                    <h4 class="headline--crema">Contacto</h4>
+                    <p>Puedes enviar tus sugerencias a través del siguiente Formulario de contacto</p>
+                    <form class="form" method="post" id="contactForm">
+                      <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" class="input-lg form-control" id="nombre" name="nombre" placeholder="Escribe tu nombre" data-error="NEW ERROR MESSAGE">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="correo">Email:</label>
+                            <input type="text" class="input-lg form-control" id="correo" name="correo" placeholder="Escribe tu correo">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+
+                        <div class="form-group">
+                          <label for="mensaje">Mensaje:</label>
+                          <textarea name="mensaje" rows="4" class="input-lg form-control" id="mensaje"></textarea>
+                        </div>
+                        <br>
+                        <button type="submit" id="form-submit" class="btn btn-lg btn-secondary text-center center-block">Enviar Mensaje</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -193,20 +181,21 @@
                     <form action="//tresdosunocorp.us14.list-manage.com/subscribe/post?u=278c2379bffafa89823055575&amp;id=ac697595f5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form" target="_blank" novalidate>
 
                         <div class="mc-field-group">
-                          <label for="name">Nombre:</label>
-                          <input type="text" name="name" value="" id="mce-FNAME" class="input-lg form-control" placeholder="Ingresa tu nombre y apellido">
+                            <label for="name">Nombre:</label>
+                            <input type="text" name="name" value="" id="mce-FNAME" class="input-lg form-control" placeholder="Ingresa tu nombre y apellido">
                         </div>
 
                         <br>
                         <div class="mc-field-group">
-                        <label for="email">E-mail:<span class="asterisk">*</span></label>
-                        <input type="email" name="EMAIL" value="" class="required email input-lg form-control" placeholder="Ingresa tu correo electrónico" id="mce-EMAIL"> <br>
-                      </div>
+                            <label for="email">E-mail:<span class="asterisk">*</span></label>
+                            <input type="email" name="EMAIL" value="" class="required email input-lg form-control" placeholder="Ingresa tu correo electrónico" id="mce-EMAIL"> <br>
+                        </div>
 
-                      <div id="mce-responses" class="clear">
-                        <div class="response" id="mce-error-response" style="display:none"></div>
-                        <div class="response" id="mce-success-response" style="display:none"></div>
-                      </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div id="mce-responses" class="clear">
+                            <div class="response" id="mce-error-response" style="display:none"></div>
+                            <div class="response" id="mce-success-response" style="display:none"></div>
+                        </div>
+                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 
                         <input type="submit" name="subscribe" value="Suscríbete" class="btn btn-lg btn-primary center-block" id="mc-embedded-subscribe">
                     </form>
@@ -215,34 +204,51 @@
         </div>
     </div>
 
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB39kQdRisms3Oi6jVbKHsPYlzqs5duuk4&callback=initMap" async defer></script>
     <script>
-      var map;
-      function initMap() {
-        var image = './images/map-marker.svg';
-        var myLatLng = {lat: 8.99305, lng: -79.503};
-
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: myLatLng,
-          scrollwheel: false,
-          draggable: false,
-          zoom: 17
-        });
-
-        var marker = new google.maps.Marker({
-          position: myLatLng,
-          map: map,
-          // title: 'Hello World!'
-          icon: image
-        });
-      }
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-87473173-1', 'auto');
+        ga('send', 'pageview');
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB39kQdRisms3Oi6jVbKHsPYlzqs5duuk4&callback=initMap"
-        async defer></script>
+
+    <script type="text/javascript">
+    var map;
+    function initMap() {
+      var image = './images/map-marker.svg';
+      var myLatLng = {lat: 8.99305, lng: -79.503};
+
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: myLatLng,
+        scrollwheel: false,
+        draggable: false,
+        zoom: 17
+      });
+
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        // title: 'Hello World!'
+        icon: image
+      });
+    }
+
+    </script>
     <!-- build:js js/master.min.js -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
+    <script src="js/validator.js"></script>
     <script src="js/main.js"></script>
     <!-- endbuild -->
 </body>
