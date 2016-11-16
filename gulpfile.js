@@ -23,7 +23,7 @@ gulp.task('browserSync', function() {
     // server: {
     //   baseDir: 'app'
     // },
-    proxy: 'localhost:8888/landing-muh/muh-landing-page/app/'
+    proxy: 'localhost:8888/muh/app/'
   });
 });
 
