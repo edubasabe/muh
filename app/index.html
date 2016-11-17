@@ -30,40 +30,15 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-    <!-- Navigation -->
-
-    <!-- <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header page-scroll">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand page-scroll" href="#page-top">Muh</a>
-                </div>
-
-                <div class="collapse navbar-collapse navbar-ex1-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="hidden"><a class="page-scroll" href="#page-top"></a></li>
-                        <li><a class="page-scroll" href="#about">About</a></li>
-                        <li><a class="page-scroll" href="#services">Services</a></li>
-                        <li><a class="page-scroll" href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav> -->
-
     <header>
         <nav class="navbar navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <a href="#page-top" class="navbar-brand page-scroll"><img src="./images/LogoCrema.png" srcset="./images/LogoCrema.png 1x, ./images/LogoCrema@2x.png 2x" alt="Logo de Muh"><span class="sr-only">Muh</span></a>
+                        <a href="#page-top" class="navbar-brand page-scroll"><img src="./images/LogoCompleto.png" srcset="./images/LogoCompleto.png 1x, ./images/LogoCompleto@2x.png 2x" alt="Logo de Muh"><span class="sr-only">Muh</span></a>
                         <ul class="list-inline text-right navbar__icons">
-                            <li><a href="https://www.instagram.com/muhpanama" class="navbar--color-crema"><i class="fa fa-3x fa-instagram"></i><span class="sr-only">Instagram</span></a></li>
-                            <li><a href="https://www.facebook.com/muhpanama" class="navbar--color-crema"><i class="fa fa-3x fa-facebook-square"></i><span class="sr-only">Facebook</span></a></li>
+                            <li><a href="https://www.instagram.com/muhpanama" class="navbar--color-crema"><i class="fa fa-2x fa-instagram"></i><span class="sr-only">Instagram</span></a></li>
+                            <li><a href="https://www.facebook.com/muhpanama" class="navbar--color-crema"><i class="fa fa-2x fa-facebook-square"></i><span class="sr-only">Facebook</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -146,33 +121,29 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-6">
                     <h4 class="headline--crema">Información de contacto</h4>
-                    <p><i class="fa fa-map-marker section__icon-padding-right"></i><a href="https://www.google.com.pa/maps/place/MUH/@8.9931606,-79.5051867,17z/data=!3m1!4b1!4m5!3m4!1s0x8faca90868c2e88d:0x1cccffcc2738ab5d!8m2!3d8.9931606!4d-79.502998">Calle 50 con calle 76 San Francisco, Panamá</a><br>
+                    <p><i class="fa fa-map-marker section__icon-padding-right"></i><a href="https://www.google.com.pa/maps/place/MUH/@8.9931606,-79.5051867,17z/data=!3m1!4b1!4m5!3m4!1s0x8faca90868c2e88d:0x1cccffcc2738ab5d!8m2!3d8.9931606!4d-79.502998" target="_blank">Calle 50 con calle 76 San Francisco, Panamá</a><br>
                         <i class="fa fa-envelope-o section__icon-padding-right"></i><a href="mailto:hola@muhpanama.com">hola@muhpanama.com</a> <br>
                         <i class="fa fa-phone section__icon-padding-right"></i><a href="tel:+5073878127">+507 387 8127</a></p>
                 </div>
                 <div class="col-xs-12 col-sm-6">
-                    <h4 class="headline--crema">Contacto</h4>
-                    <p>Puedes enviar tus sugerencias a través del siguiente Formulario de contacto</p>
-                    <form class="form" method="post" id="contactForm">
+                    <!-- <h4 class="headline--crema">Contacto</h4> -->
+                    <p class="lead text-center">¿No has participado? <br> Ingresa tu correo electrónico y llévate el Trío de Choripanes* <small style="font-size:1.4rem;">*Con la compra mínima de $10</small></p>
+
+                    <form class="form" method="post" id="ajax-contact-2">
                       <div class="row">
-                        <div class="form-group col-sm-6">
+                        <div class="form-group">
                             <label for="nombre">Nombre:</label>
-                            <input type="text" class="input-lg form-control" id="nombre" name="nombre" placeholder="Escribe tu nombre" data-error="NEW ERROR MESSAGE">
+                            <input type="text" class="input-lg form-control" id="name" name="nombre" placeholder="Escribe tu nombre" data-error="NEW ERROR MESSAGE">
                             <div class="help-block with-errors"></div>
                         </div>
-                        <div class="form-group col-sm-6">
+                        <div class="form-group">
                             <label for="correo">Email:</label>
                             <input type="text" class="input-lg form-control" id="correo" name="correo" placeholder="Escribe tu correo">
                             <div class="help-block with-errors"></div>
                         </div>
                       </div>
-
-                        <div class="form-group">
-                          <label for="mensaje">Mensaje:</label>
-                          <textarea name="mensaje" rows="4" class="input-lg form-control" id="mensaje"></textarea>
-                        </div>
                         <br>
-                        <button type="submit" id="form-submit" class="btn btn-lg btn-secondary text-center center-block">Enviar Mensaje</button>
+                        <button type="submit" id="form-submit" class="btn btn-lg btn-secondary text-center center-block">Subscribirse</button>
                     </form>
                 </div>
             </div>
@@ -185,31 +156,27 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title text-center">¡Participa!</h4>
+                    <h4 class="modal-title text-center title-subscribe">¡Participa!</h4>
                 </div>
-                <div class="modal-body" id="mc_embed_signup">
-                    <p class="text-center modal__text-lead">Ingresa tu correo electrónico y llévate <b>gratis</b> el trío de chorizo parrillero</p>
-                    <!-- Begin MailChimp Signup Form -->
-                    <form action="//tresdosunocorp.us14.list-manage.com/subscribe/post?u=278c2379bffafa89823055575&amp;id=ac697595f5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form" target="_blank" novalidate>
+                <div class="modal-body">
+                    <p class="text-center modal__text-lead">Ingresa tu correo electrónico y llévate el Trío de Choripanes* <br> <small>*Con la compra mínima de $10</small></p>
 
-                        <div class="mc-field-group">
-                            <label for="name">Nombre:</label>
-                            <input type="text" name="name" value="" id="mce-FNAME" class="input-lg form-control" placeholder="Ingresa tu nombre y apellido">
+                    <form class="" method="post" role="form" data-toggle="validator" id="ajax-contact">
+
+                        <div class="form-group">
+                            <label for="nombre" class="control-label">Nombre:</label>
+                            <input type="text" class="form-control input-lg" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
+                            <span class="error">Debes escribir tu nombre correctamente</span>
                         </div>
 
                         <br>
-                        <div class="mc-field-group">
-                            <label for="email">E-mail:<span class="asterisk">*</span></label>
-                            <input type="email" name="EMAIL" value="" class="required email input-lg form-control" placeholder="Ingresa tu correo electrónico" id="mce-EMAIL"> <br>
+                        <div class="form-group">
+                            <label for="email" class="control-label">Email:</label>
+                            <input type="text" class="form-control input-lg" name="email" id="email" placeholder="Ingrese su email" required>
+                              <span class="error mail-error">Debes escribir tu email correctamente</span>
                         </div>
-
-                        <div id="mce-responses" class="clear">
-                            <div class="response" id="mce-error-response" style="display:none"></div>
-                            <div class="response" id="mce-success-response" style="display:none"></div>
-                        </div>
-                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-
-                        <input type="submit" name="subscribe" value="Suscríbete" class="btn btn-lg btn-primary center-block" id="mc-embedded-subscribe">
+                        <button type="submit" class="btn btn-primary btn-lg">Subscribirse</button>
+                        <div id="mostrar-datos"></div>
                     </form>
                 </div>
             </div>
@@ -262,6 +229,8 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/validator.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/subscribe.js"></script>
+
     <!-- endbuild -->
 </body>
 

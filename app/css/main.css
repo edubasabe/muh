@@ -185,6 +185,14 @@ html {
   font-size: 1.8rem;
 }
 
+.error {
+  display: none;
+}
+
+#subModal .input-group {
+  padding: 1.5rem;
+}
+
 .owl-carousel {
   position: relative;
 }

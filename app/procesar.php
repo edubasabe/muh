@@ -1,8 +1,7 @@
 <?php
-/*
+
 $nombre = $_POST["nombre"];
-$correo = $_POST["correo"];
-$mensaje = $_POST["mensaje"];
+$correo = $_POST["email"];
 
 $EmailTo = "edu@tresdosunocorp.com";
 $Subject = "Contacto desde muh panama";
@@ -16,9 +15,6 @@ $Body .= "Email: ";
 $Body .= $correo;
 $Body .= "\n";
 
-$Body .= "Mensaje: ";
-$Body .= $mensaje;
-$Body .= "\n";
 
 // send email
 $success = mail($EmailTo, $Subject, $Body, "From:".$correo);
@@ -29,5 +25,5 @@ if ($success){
 }else{
     echo "invalid";
 }
-*/
+
 ?>
