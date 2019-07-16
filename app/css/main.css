@@ -44,7 +44,6 @@ html {
 }
 
 .navbar {
-  background-image: -webkit-linear-gradient(bottom, transparent, #000000);
   background-image: linear-gradient(to top, transparent, #000000);
   border-bottom: 0;
   min-height: 9rem;
@@ -66,7 +65,6 @@ html {
 
 @media only screen and (min-width: 768px) {
   .navbar {
-    -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
     transition: background .5s ease-in-out,padding .5s ease-in-out;
   }
 }
@@ -122,7 +120,6 @@ html {
 }
 
 .full-height {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
@@ -208,16 +205,14 @@ html {
   font-size: 1.8rem;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .owl-carousel .owl-controls {
   position: relative;
   top: 0;
   left: 0;
-  -webkit-transform: translate(0%, -100%);
-          transform: translate(0%, -100%);
+  transform: translate(0%, -100%);
   width: 100%;
 }
 
@@ -225,8 +220,7 @@ html {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 100%;
 }
 
@@ -244,8 +238,7 @@ html {
   position: absolute;
   bottom: 0;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .parallax [class*="bg__"] {

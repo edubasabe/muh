@@ -38,12 +38,6 @@ $(document).on('ready', function() {
 
 //-- Altura del Viewport
 var altoSlide = $(window).height();
-
-// $('.home-slide').css({
-//     'max-height': altoSlide + 'px!important',
-//     'height': altoSlide + 'px'
-// });
-
 $(document).ready(function() {
     $('#slider-carousel').owlCarousel({
         loop: true,
@@ -89,7 +83,7 @@ $("#contactForm").validator().on('submit', function (event) {
   }
 });
 
-function submitForm(){
+function submitForm() {
     // Initiate Variables With Form Content
     var nombre = $("#nombre").val();
     var correo = $("#correo").val();
@@ -119,26 +113,3 @@ function submitMSG(valid, msg){
     }
     $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
 }
-
-
-
-
-
-
-// function enviarMensaje(){
-// var nombre = document.getElementById('nombre').value;
-// var correo = document.getElementById('correo').value;
-// var mensaje = document.getElementById('mensaje').value;
-//
-// var dataen = 'nombre='+nombre +'&correo='+correo+'&mensaje='+mensaje;
-//
-// $.ajax({
-//   type:'post',
-//   url:'send.php',
-//   data:dataen,
-//   success:function(resp){
-//     $('#respa').html(resp);
-//   }
-// });
-// return false;
-// }
